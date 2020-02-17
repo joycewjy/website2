@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+     <title> Our Rates </title> 
+
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head> 
+
+<style>
+ 
+body {
+     background-color: grey;
+     font-family: Rockwell;
+} 
+
+
+h3 {
+  border-left: 6px solid red;
+  background-color: khaki;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: orange;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.main {
+  position: relative;
+  width: 1250px;
+  height: 500px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+body {margin:25px;}
+
+div.polaroid {
+  width: 12%;
+  background-color: orange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 5px;
+  background-color: papayawhip;
+}
+
+#borderimg { 
+  border: 20px solid transparent;
+  padding: 40px;
+  border-image: url(border.png) 30 stretch;
+  width: 60%;
+  margin: auto;
+}
+
+.img2 {
+  float: right;
+}
+
+</style> 
+
+</head>
+
+<body>
+    <nav> 
+	<a href="index.html">Home</a> |
+	<a href="ourrates.html">Our Rates</a> | 
+	<a href="ourclasses.html">Our Classes</a> |
+
+</nav> 
+
+<div class="main">
+  <div style="opacity:0.6;"> 
+  <img src="ratesandfacil.jpg" alt="ratesandfacil" width="1250" height="500"> 
+</div>
+  <div class="center"> Our Rates and Facilities </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<br> 
+<center> <h3 style="color:rgb(178,34,34);"> Here's what <b> BoulderMovement </b> has to offer! </h3> </center>
+<br>
+<center> 
+<div class="polaroid">
+  <img src="wifi.png" alt="wifi" style="width:100%">
+  <div class="container">
+  <p>Wifi</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="workspace.png" alt="workspace" style="width:100%">
+  <div class="container">
+  <p>Workspace</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="watercooler.png" alt="watercooler" style="width:100%">
+  <div class="container">
+  <p>Water cooler</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="lockers.png" alt="lockers" style="width:100%">
+  <div class="container">
+  <p>Lockers</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="showers.png" alt="showers" style="width:100%">
+  <div class="container">
+  <p>Showers</p>
+  </div>
+</div>
+
+<br>
+<div class="polaroid">
+  <img src="dumbbell.png" alt="fitnesszone" style="width:100%">
+  <div class="container">
+  <p>Fitness zone</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="shoe.png" alt="climbing shoe" style="width:100%">
+  <div class="container">
+  <p>Climbing shoe</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="chalkbag.png" alt="chalkbag" style="width:100%">
+  <div class="container">
+  <p>Chalkbag</p>
+  </div>
+</div>
+
+</center> 
+
+<p id="borderimg" style="font-size:18px;">
+  <img class="img2" src="logo.jpg" alt="logo" width="160" height="160">
+<b> Day pass </b> - $30 
+<br>
+<b> Multipass x10 </b> <i> (valid up to 6months) </i> - $250 
+<br>
+<b> Monthly pass </b> <i> (unlimited entry) </i> - $98/month
+<br> 
+<b> Towel </b> - $2 
+<br>
+<b> Climbing shoe </b> - $5
+<br> 
+<b> Chalk bag </b>  - $2 
+</p>
+</body>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</html>

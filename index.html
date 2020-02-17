@@ -1,0 +1,238 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+     
+     <title> Move with BM </title> 
+
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head> 
+
+<style>
+ 
+body {
+     background-color: grey;
+     font-family: Rockwell;
+} 
+
+.mySlides {display:none;}
+
+h1 {
+  border-left: 6px solid red;
+  background-color: khaki;
+}
+
+p {
+  background-color: papayawhip;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: orange;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+.center {
+  margin: auto;
+  width: 40%;
+  border: 3px solid #191970;
+  padding: 5px;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img2 {
+  float: right;
+}
+</style> 
+
+<body>
+    <nav> 
+	<a href="home.html">Home</a> |
+	<a href="ourrates.html">Our Rates</a> | 
+	<a href="ourclasses.html">Our Classes</a> |
+
+</nav> 
+
+<div class="w3-content w3-section" style="max-width:800px;">
+  <img class="mySlides w3-animate-fading" src="bm.jpg" style="width:100%; display:none">
+  <img class="mySlides w3-animate-fading" src="bmwall.jpg" style="width:100%;">
+  <img class="mySlides w3-animate-fading" src="wall.jpg" style="width:100%;">
+  <img class="mySlides w3-animate-fading" src="axiss.jpg" style="width:100%; display:none">
+
+<div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="bm.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="bmwall.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="wall.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="axiss.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+    </div>
+  </div>
+</div>
+
+<center> <h1 style="color:rgb(178,34,34);"> <b> An extraordinary <s> gym </s> lifestyle. </h1> </b> </center>
+<p>
+<b style="color:rgb(178,34,34); font-size: 25px"> At BoulderMovement, </b>
+<br><br>
+We make it possible for you to stay <b> active, healthy and strong </b> as part of your of life. 
+<br>
+Located at the heart of the CBD area, we offer a <u> place to work and a place to meet your fitness goals <b> through bouldering. </b></u>
+<br><br>
+<b style="color:rgb(178,34,34); font-size: 20px">Bouldering...?</b> 
+<br> 
+Bouldering is a sport that incorporates the <b> whole body </b> when scaling up to the top. 
+It involves the knowledge, planning and application of a series of movement that is bound to make you 
+<b> stronger physically and mentally! </b>
+Experience bouldering with a community that is passionate, friendly, and supportive. 
+Whether you are just exploring for a day, or looking to pick up a new hobby that will shape your life for years to come, we have what you need and we can help you 
+<a href="https://www.instagram.com/bouldermovementsg/"; title='Follow us on Instagram! :)';> #climbtoabetteryou. </a> 
+<br> 
+<br> 
+Check out <a href="ourrates.html"> our rates </a> to see what facilities we have to offer and <a href="ourclasses.html"> our classes! </a> 
+<br>
+<br>
+</p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="center">
+  <img class="img2" src="logo.jpg" alt="logo" width="120" height="120">
+<b style="color:mediumblue; font-size: 20px"> Open Daily </b>
+<br>
+<br>
+17:00-22:00 <b> Mon </b>
+<br>
+11:00-22:00 <b> Tues-Fri </b> 
+<br>
+9:00-20:00 <b> Sat.Sun.PH </b>
+<br>
+<br>
+
+<center> <b>
+6A Shenton Way 
+<br>
+#B1-03 Downtown Gallery 
+<br>
+Singapore 068815
+<br>
+Tel: (+65) 6816 6001
+</b>
+<br><br>
+<b> Nearest MRT: </b> <u> Tanjong Pagar/ Downtown </u>
+<br> 
+<b> Nearest Bus stop: </b> <u> UIC Bldg (167/167e from Dhoby Ghaut Stn) </u>
+<br>
+</center>
+
+</div>
+<br>
+
+</body> 
+
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 8000); // Change image every 8 seconds
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</html>
